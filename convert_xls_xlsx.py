@@ -3,17 +3,16 @@ from office365.runtime.auth.client_credential import ClientCredential
 import pandas as pd
 import os
 
-os.environ["HTTP_PROXY"] = "genproxy.corp.amdocs.com:8080"
-os.environ["HTTPS_PROXY"] = "genproxy.corp.amdocs.com:8080"
+
 
 # ================= CONFIGURAÇÕES =================
 # Credenciais do Azure AD App Registration
-client_id = "f3646227-1974-46f3-9fde-53f7f73370e9"   # Application (client) ID
-tenant_id = "c8eca3ca-1276-46d5-9d9d-a0f2a028920f"   # Directory (tenant) ID
-client_secret = "bb22b454-c01c-4db0-aae5-56551e4437af"  # Client Secret
+client_id = "XXXXX"   # Application (client) ID
+tenant_id = "XXXXXXXXX"   # Directory (tenant) ID
+client_secret = "XXXXXXXXXXXXX"  # Client Secret
 
 # URL do site do SharePoint
-site_url = "https://amdocs.sharepoint.com/sites/VFIT_PowerBI"
+site_url = "https://XXXXXXXX.sharepoint.com/sites/VFIT_PowerBI"
 
 # Caminho relativo do arquivo no SharePoint (sem %20 → use espaço normal)
 file_relative_url = "/sites/VFIT_PowerBI/Shared Documents/POWERBI/INCs/INC_Report_PowerBI.xls"
@@ -52,4 +51,5 @@ def converter_xls_para_xlsx():
 
 if __name__ == "__main__":
     baixar_arquivo()
+
     converter_xls_para_xlsx()
